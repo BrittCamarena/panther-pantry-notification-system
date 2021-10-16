@@ -10,10 +10,10 @@ date_default_timezone_set('America/Los_Angeles');
 
 // Databse class for Microsoft SQL Server
 class Database {
-    const SERVER_NAME = "cisdbss.pcc.edu";
-    const DATABASE = "234a_PortlandCommunityCoders";
-    const USER_ID = "234a_PortlandCommunityCoders";
-    const PASSWORD = "PortlandCommunityCoders_FA20_)-#";
+    const SERVER_NAME = ***REDACTED_LOGIN***;
+    const DATABASE = ***REDACTED_LOGIN***;
+    const USER_ID = ***REDACTED_LOGIN***;
+    const PASSWORD = ***REDACTED_LOGIN***;
 
     public static $db = NULL;
 
