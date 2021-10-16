@@ -1,0 +1,68 @@
+/*
+Programmer: Brittany Camarena
+Date: 10/28/2020
+Code Overview: CSS for the master-level pages
+*/
+
+html,
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+
+h2 {
+    text-align: center;
+    color: #fff;
+    margin: 16px 0;
+}
+
+.header {
+    background-color: #008099;
+}
+
+#portalContainer::before {
+    content: "";
+    opacity: .03;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url("../masterImages/ppLogoBlack.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+}
+
+#portalContainer {
+    height: 600px;
+    position: relative;
+    margin-top: 75px;
+}
+
+#textContainer {
+    width: 100%;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#portalHeader {
+    text-align: center;
+    color: #008099;
+    font-size: 4em;
+}
+
+#portalPara {
+    text-align: center;
+    font-size: 1.5em;
+}
+
+#login-card {
+    border-radius: 25px;
+    margin: 150px auto;
+    overflow: hidden;
+    width: 350px;
+}

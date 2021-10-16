@@ -1,0 +1,46 @@
+/*
+Programmer: Brittany Camarena
+Date: 11/17/2020
+Code Overview: CSS for navigation bar
+*/
+
+#navigation {
+    font-family: "Lato", sans-serif;
+    background-color: #008099;
+}
+
+#navigation .nav-link {
+    color: #b4d7db;
+    transition: .3s;
+    padding: 10px;
+}
+
+#navigation .nav-link:hover {
+    color: white;
+}
+
+#navigation .active {
+    color: white;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: .25rem;
+}
+
+#navigation .navbar-toggler {
+    border-color: #d4ecec;
+}
+
+#navigation .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'><path stroke='rgba(255, 255, 255, .9)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>");
+}
+
+.logout-btn {
+    color: #014451;
+    width: 82px;
+    background-color: #f8f9fa;
+}
+
+.logout-btn:hover {
+    color: #f8f9fa;
+    background-color: #008099;
+    border: 1px solid #f8f9fa;
+}
