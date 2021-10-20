@@ -48,7 +48,7 @@ window.addEventListener("load", function() {
         var data = "template=" + template + "&subject=" + subject + "&message=" + message;        
         var xhr = new XMLHttpRequest();
 
-        xhr.open("POST", "sendNotification/includes/postForm.php", true);
+        xhr.open("POST", "sendNotification/postForm.php", true);
         xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");    
         xhr.onload = function() {
             SUBMIT.classList.remove("buttonLoader");
@@ -64,7 +64,7 @@ window.addEventListener("load", function() {
     function getTemplates() {
         var xhr = new XMLHttpRequest();
 
-        xhr.open("GET", "sendNotification/includes/getTemplates.php", true);    
+        xhr.open("GET", "sendNotification/getTemplates.php", true);    
         xhr.onload = function() {
             var templates = JSON.parse(this.responseText);
             
@@ -156,6 +156,7 @@ window.addEventListener("load", function() {
         var modalContent = document.getElementsByClassName("modal-content")[0];
         var modalH = document.createElement("h3");
         var modalP = document.createElement("p");
+        var modalP2 = document.createElement("p");
         var modalE = document.createElement("div");
         var error = xhr.responseText.match(/(error)/gmi);
     
@@ -171,10 +172,12 @@ window.addEventListener("load", function() {
             modalContent.appendChild(modalE);
         } else {
             modalH.innerHTML = "Notification sent successfully!"
-            modalP.innerHTML = "To review your message or previous notifications, please visit the Notification Log page.";
-            
+            modalP.innerHTML = "Due to server limitations and security, the PHP mail function is not available and notifications have not been saved to the database. The following is a direct response from the database of the currently registered subscribers that would receive this notification. Note that managers are excluded from the notification list.";
+            modalP2.innerHTML = xhr.responseText;
+
             modalContent.appendChild(modalH);
             modalContent.appendChild(modalP);
+            modalContent.appendChild(modalP2);
         }
     
         // Make modal visible

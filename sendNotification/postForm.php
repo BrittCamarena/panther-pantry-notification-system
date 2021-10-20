@@ -7,7 +7,7 @@ Code Overview: Sends notification to food pantry subscribers and saves form data
 session_start();
 
 // Database connection for Microsoft SQL Server
-require_once("dbConnect.php");
+require_once("includes/dbConnect.php");
 
 // POST data constants
 define("USER_ID", $_SESSION["userID"]);
@@ -72,11 +72,11 @@ function sendNotification() {
     
     if (count($recipients) > 0) {
         foreach ($recipients as $r) {
-            mail($r, SUBJECT, MESSAGE, $headers);
+            // mail($r, SUBJECT, MESSAGE, $headers);
             // DEBUG CODE
-            // echo $r . " " . SUBJECT . " " . MESSAGE . "<br>";
+            echo $r . "<br>";
         }
-        echo "Notification sent successfully<br>";
+        //echo "Notification sent successfully<br>";
     } else {
         echo "Warning: No recipients in database<br>";
     }
@@ -99,12 +99,12 @@ function saveNotification() {
     $stmt->bindValue(':message', MESSAGE);
     $stmt->bindValue(':recipientCount', $recipientCount);
 
-    $insert = $stmt->execute();
+    // $insert = $stmt->execute();
     // DEBUG CODE
-    // $insert = true;
+    $insert = true;
 
     if ($insert) {
-        echo "Notification saved successfully<br>";
+        //echo "Notification saved successfully<br>";
         // DEBUG CODE
         // echo "UserID: " . USER_ID . " " . "TemplateID: " . $templateID . " " . SUBJECT . " " . MESSAGE . " " . $recipientCount . " " . "<br>";
     } else {

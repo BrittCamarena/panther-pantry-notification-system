@@ -6,7 +6,7 @@ Code Overview: Gets notification templates from database
 */
 
 // Database connection for Microsoft SQL Server
-require_once("dbConnect.php");
+require_once("includes/dbConnect.php");
 
 getTemplates();
 

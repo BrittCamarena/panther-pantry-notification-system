@@ -17,25 +17,27 @@ $pages = [
     ],
     'templateCreation' => [
         'name' => 'Template Creation',
-        'url' => 'template.php',
+        'url' => 'notice.php',
     ],
     'notificationLog' => [
         'name' => 'Notification Log',
-        'url' => 'notificationLog.php',
+        'url' => 'notice.php',
     ],
     'accountMgmt' => [
         'name' => 'Account Management',
-        'url' => 'acctMgmt.php',
+        'url' => 'notice.php',
     ],
 ];
 
 // Adds "active" class to navigation for the current page
-function isActive($currect_page) {
-  $page = basename($_SERVER['PHP_SELF']);  
+function isActive($current_page) {
+  $page = basename($_SERVER['PHP_SELF']);
 
-  if ($currect_page == $page){
-      echo 'active '; //class name in css 
-  } 
+  if ($current_page == 'notice.php') {
+        return false;
+  } else if ($current_page == $page) {
+        echo 'active '; //class name in css 
+  }
 }
 ?>
 

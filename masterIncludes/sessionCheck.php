@@ -10,4 +10,5 @@ if (!isset($_SESSION['userID'])) {
     header("Location: accessDenied.php");
     die();
 }
+
 ?>
