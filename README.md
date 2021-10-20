@@ -17,3 +17,4 @@ Directories beginning with "master" were shared between all our team's project c
 - Rigorous client-side and server-side input validation when sending notifications
 - Fetch preexisting templates when composing notifications
 - User logout functionality and site redirect
+- Bootstrap library for simplifying web page interface
